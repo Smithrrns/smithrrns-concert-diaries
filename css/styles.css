@@ -110,6 +110,7 @@ main {
     background: white;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     padding: 1rem;
+    box-sizing: content-box;
 }
 
 .cardAlbum:hover {
