@@ -18,8 +18,7 @@ p {
 }
 
 .indexHeader img {
-    width: 5rem;
-    height: 6rem;
+    width: 9rem;
 }
 
 .indexHeader button {
@@ -27,33 +26,63 @@ p {
     border-color: #19323f;
 }
 
-/* Main */
+/* Hero */
 main {
     display: flex;
     flex-direction: column;
 
-    margin-top: 6rem;
+    margin-top: 3rem;
     background-color: #ffffef;
 }
 
-.mainSuperior article {
-    margin: 0.3rem;
-    padding: 0.3rem;
-}
+.oscurecer-fondo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.mainSuperior img {
+    position: absolute;
     width: 100%;
-    height: auto;
-    display: block;
-    padding: 1rem 0rem;
+    height: 100%;
+
+    background-color: #0000008e;
+
 }
 
-.mainSuperior h1 {
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url('../img/Hero.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 70vh;
+}
+
+.heroTexto {
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem;
+    padding-top: 3rem;
+    margin: 1rem;
+}
+
+.hero h1 {
+    font-weight: 800;
+    line-height: 26px;
     color: #f360c2;
 }
 
-.mainSuperior p {
-    text-align: justify;
+.hero p {
+    line-height: 15px;
+    color: #ffff;
+}
+
+.hero h2 {
+    color: #ffff;
+    font-size: 20px;
 }
 
 .containerSobreMiTexto {
@@ -64,7 +93,7 @@ main {
     display: grid;
     align-items: center;
 
-    margin: 0.3rem;
+    margin: 2rem;
     padding: 1.5rem;
 }
 
@@ -75,27 +104,32 @@ main {
     height: 100%;
 }
 
-.containerSobreMi1{
+.containerSobreMi1 {
     margin-top: 1rem;
 }
 
 /* MainCard*/
 .mainCardAlbum {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    padding: 2rem 1rem;
-    justify-items: center;
+    padding: 40px;
 }
 
 .mainCardTitulo {
-    margin: 1rem;
+    font-size: 1.5rem;
+    text-align: left;
+    margin: 0;
+    padding-right: 20px;
+    border-bottom: 2px solid #5fc4fb;
 }
 
-.mainCardAlbum h3 h4 p {
+.mainCardAlbum h3,
+.mainCardAlbum h4,
+.mainCardAlbum p {
     margin: 0.5rem;
-    line-height: 30px;
+    line-height: 1.2;
 }
+
 
 .mainCardAlbum h4 {
     font-size: 20px;
@@ -103,26 +137,27 @@ main {
     font-weight: 400;
 }
 
-.mainCardAlbum div {
-    max-width: 20rem;
+.cardAlbum {
     border: 2px solid #a4dfff;
     border-radius: 10px;
     overflow: hidden;
-    background: white;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     padding: 1rem;
-    box-sizing: content-box;
+    background: #fff;
 }
 
 .cardAlbum:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 20px #0000001a;
 }
 
 .cardAlbum img {
     width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
     border-radius: 7px;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .cardAlbum p {
@@ -130,37 +165,34 @@ main {
 }
 
 .rankingConciertosTitulo {
-    padding: 1rem;
+    padding: 2rem;
     text-align: center;
+
 
 }
 
 /* Carousel */
-.carousel-control-prev-icon {
-    background-color: #a4dfff;
-    border-radius: 50%;
-}
-
-.carousel-control-next-icon {
-    background-color: #a4dfff;
-    border-radius: 50%;
+.carousel {
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .carousel-img {
-    height: 30rem;
-    object-fit: contain;
+    height: 60vh;
+    object-fit: cover;
+    object-position: center;
+    width: 100vh;
 }
-.carousel-caption{
+
+.carousel-caption {
     margin-right: 2rem;
     margin-left: 2rem;
 }
 
 
 /* footer */
-.footerInfo{
-    background-color:#92bc7a;
-}
-.footerInfo article {
+.footerInfo {
+    background-color: #92bc7a;
     text-align: center;
 }
 
@@ -211,35 +243,46 @@ main {
     }
 
     .carousel-item img {
-        height: 70rem;
+        height: 400px;
+        object-fit: cover;
+
     }
 }
 
 /*Desktop*/
 @media (min-width: 800px) {
 
+    .navbar-collapse {
+        flex-grow: unset !important;
+        padding-right: 3rem;
+    }
+
     .sobreMiHeader img {
         max-height: 35rem;
     }
+    .heroTexto{
+        padding: 25rem;
+    }
+
+    .carousel-item {
+        padding: 1rem 5rem;
+    }
 
     .carousel-item img {
-        height: 70rem;
+        justify-content: center;
     }
 
-    .mainCardAlbum article {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+    .mainCardAlbum {
+        grid-template-columns: 200px repeat(4, 1fr);
+        grid-template-rows: auto auto;
     }
-    .card5 {
-        grid-area: 2 / 2;
+
+    .mainCardTitulo {
+        grid-row: 1 / 3;
+        grid-column: 1;
+
+        border-bottom: none;
+        border-right: 2px solid #5fc4fb;
     }
-    .card6 {
-        grid-area: 2 / 3;
-    }
-    .card7 {
-        grid-area: 2 / 4;
-    }
-    .card8 {
-        grid-area: 2 / 5;
-    }
+
 }
