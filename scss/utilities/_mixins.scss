@@ -1,0 +1,12 @@
+//mixins
+
+@mixin centrar-contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin img-fit {
+    width: 100%;
+    object-fit: cover;
+}
