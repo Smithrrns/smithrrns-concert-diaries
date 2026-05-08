@@ -1,14 +1,25 @@
-// 1. Cargamos las páginas (Sass moderno prefiere @use)
+@use "./utilities/variables";
 @use "./pages/index";
 @use "./pages/festivales";
 @use "./pages/conciertos";
 @use "./pages/contacto";
 @use "./pages/barricadeGuide";
 
-// 2. Estilos globales (si quieres dejarlos aquí, deben ir al final)
 * {
     font-family: "Google Sans", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+p {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.5;
+}
+
+h1 {
+    font-weight: 800;
+    line-height: 26px;
+    color: variables.$colorRosadoPrincipal;
 }

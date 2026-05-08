@@ -1,0 +1,95 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+@use "../utilities/extends";
+
+//Header 
+body {
+    background-color: variables.$colorBeigeFondo;
+}
+
+.indexHeader {
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+
+    img {
+        width: 9rem;
+    }
+
+    button {
+        background-color: variables.$colorCelesteFondo;
+        border-color: variables.$colorCelesteOsc;
+    }
+
+    @media (min-width: variables.$bp-desktop) {
+        .navbar-collapse {
+            flex-grow: unset !important;
+            padding-right: 3rem;
+        }
+    }
+}
+
+//main
+.main-fest {
+    margin-top: 6rem;
+    padding: variables.$espaciado-base;
+}
+
+.contentLollapalooza {
+    display: flex;
+    flex-direction: column;
+    background-color: variables.$colorCelesteFondo;
+    padding: variables.$espaciado-base;
+
+    h2 {
+        font-weight: 800;
+        background-color: #0000;
+    }
+
+    h3,
+    h4 {
+        font-weight: 600;
+    }
+
+    p,
+    h3,
+    h4 {
+        padding: 0rem 1rem;
+    }
+
+}
+
+.cardLineupFest {
+
+    img {
+        max-width: 95%;
+        height: auto;
+        border-radius: 7px;
+        align-items: center;
+        display: block;
+        margin: 0 auto;
+        padding-bottom: variables.$espaciado-base;
+    }
+}
+
+.botonContenido {
+    @include mixins.centrar-contenido;
+    margin-top: variables.$espaciado-base;
+
+    .btn-instagram {
+        display: inline-block;
+        padding: variables.$espaciado-base;
+        border-radius: 30px;
+        font-weight: 600;
+        text-decoration: none;
+        color: variables.$colorBlanco;
+        background: variables.$colorCelesteOsc;
+        background-size: 200% 200%;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    .btn-instagram:hover {
+        background-position: right center;
+        transform: scale(1.05);
+    }
+}
