@@ -1,5 +1,6 @@
-%flexBasico{
-    display: flex;
-    justify-items: center;
-    align-items: center;
+%oscurecerFondo {
+    position: absolute;
+    inset: 0;
+    background-color: #00000085;
 }
+

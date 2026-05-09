@@ -7,25 +7,69 @@
     background-color: variables.$colorBeigeFondo;
 }
 
-
 .main-concert {
     margin-top: 6rem;
-    padding: variables.$espaciado-base;
+
+    h1{
+        margin: variables.$espaciado-base;
+    }
 }
 
+//Hero
+.bdBunnyHero {
+    @include mixins.centrar-contenido;
+    flex-direction: column;
+    gap: variables.$espaciado-base;
 
-.contentBadBunny {
-    p {
-        @include mixins.centrar-contenido;
-        background-image: url("../img/backgrnBadBunny.png");
-        background-repeat: no-repeat;
-        background-size: cover;
-        position: relative;
-        height: 70vh;
+    background-image: url("../img/backgrnBadBunny.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
 
-        color: variables.$colorBlanco;
+    position: relative;
+    height: 50vh;
+}
+.reviewBdBunny {
+    @extend %oscurecerFondo;
+    z-index: 1;
+}
 
-        
+.heroContentBdBunny{
+    position: relative;
+    z-index: 2;
+    color: variables.$colorBlanco;
+    padding: 2rem;
+}
 
+//ContentbadBunny
+.bdBunnyContent{
+    padding: variables.$espaciado-base;
+
+    h3{
+        padding-top: variables.$espaciado-base;
+    }
+    h4{
+        padding-top: 0.5rem;
+    }
+}
+
+.galeriaBdBunny {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    video,
+    img {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+        display: block;
+        border-radius: 1rem;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+    }
+
+    @media (min-width: variables.$bp-desktop) {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

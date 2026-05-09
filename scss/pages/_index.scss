@@ -34,49 +34,49 @@ main {
     background-color: variables.$colorBeigeFondo;
 }
 
-.oscurecer-fondo {
-    @include mixins.centrar-contenido;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
-    background-color: #0000008e;
-
-}
-
 .hero {
-    @include mixins.centrar-contenido;
+    position: relative;
+    height: 70vh;
     background-image: url('../img/Hero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
-    height: 70vh;
+    overflow: hidden;
+}
 
-    p {
-        line-height: 15px;
-        color: variables.$colorBlanco;
-    }
+.heroContent {
+    @extend %oscurecerFondo;
+
+    display: flex;
+    justify-content:center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.heroTexto {
+    position: relative;
+    z-index: 2;
+
+    flex-direction: column;
+
+    padding: 2rem;
+    margin: variables.$espaciado-base;
+
+    color: variables.$colorBlanco;
 
     h2 {
         color: variables.$colorBlanco;
-        font-size: 20px;
     }
 
-    .heroTexto {
-        display: flex;
-        flex-direction: column;
-
-        padding: 2rem;
-        padding-top: 3rem;
-        margin: variables.$espaciado-base;
-
-        @media (min-width: variables.$bp-desktop) {
-            width: 40%;
-        }
+    p {
+        line-height: 1.6;
     }
 
+    @media (min-width: variables.$bp-desktop) {
+        width: 40%;
+        @include mixins.centrar-contenido;
+    }
 }
-
 
 .containerSobreMiTexto {
     display: grid;
