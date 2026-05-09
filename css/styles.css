@@ -454,6 +454,27 @@ main {
   transform: scale(1.05);
 }
 
+.bodyConciertos {
+  background-color: #ffffef;
+}
+
+.main-concert {
+  margin-top: 6rem;
+  padding: 1rem;
+}
+
+.contentBadBunny p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../img/backgrnBadBunny.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  height: 70vh;
+  color: #fff;
+}
+
 * {
   font-family: "Google Sans", sans-serif;
   margin: 0;

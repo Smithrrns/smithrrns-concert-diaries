@@ -1,0 +1,31 @@
+@use "../utilities/variables";
+@use "../utilities/mixins";
+@use "../utilities/extends";
+
+//Header 
+.bodyConciertos {
+    background-color: variables.$colorBeigeFondo;
+}
+
+
+.main-concert {
+    margin-top: 6rem;
+    padding: variables.$espaciado-base;
+}
+
+
+.contentBadBunny {
+    p {
+        @include mixins.centrar-contenido;
+        background-image: url("../img/backgrnBadBunny.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 70vh;
+
+        color: variables.$colorBlanco;
+
+        
+
+    }
+}
