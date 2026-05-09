@@ -231,7 +231,7 @@ main {
   padding: 0.3rem;
 }
 
-body {
+.bodyFestivales {
   background-color: #ffffef;
 }
 
@@ -262,12 +262,10 @@ body {
 .contentLollapalooza {
   display: flex;
   flex-direction: column;
-  background-color: #d0f4fc;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 .contentLollapalooza h2 {
   font-weight: 800;
-  background-color: rgba(0, 0, 0, 0);
 }
 .contentLollapalooza h3,
 .contentLollapalooza h4 {
@@ -278,15 +276,160 @@ body {
 .contentLollapalooza h4 {
   padding: 0rem 1rem;
 }
+.contentLollapalooza h3,
+.contentLollapalooza h4 {
+  padding-top: 1rem;
+}
+@media (min-width: 500px) {
+  .contentLollapalooza {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 2.5rem;
+  }
+  .contentLollapalooza h2 {
+    font-size: 25px;
+  }
+  .contentLollapalooza p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+@media (min-width: 900px) {
+  .contentLollapalooza {
+    max-width: 1100px;
+  }
+  .contentLollapalooza h2 {
+    font-size: 28px;
+  }
+  .contentLollapalooza p {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+}
 
+.mainTitulo h2 {
+  background-color: #000000;
+  color: #fff;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+}
+
+@media (min-width: 900px) {
+  .planImgFest {
+    display: flex;
+    gap: 1rem;
+    width: 33%;
+  }
+}
+
+.cardLineupFest {
+  padding: 0.8rem;
+  border-radius: 10px;
+}
 .cardLineupFest img {
-  max-width: 95%;
+  max-width: 90%;
   height: auto;
   border-radius: 7px;
-  align-items: center;
   display: block;
+  margin: 0 auto 1rem auto;
+}
+
+.backgroundLineup {
+  position: relative;
+  background-image: url("../img/backgrnLolla.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+.backgroundLineup h3,
+.backgroundLineup p {
+  color: #fff;
+  position: relative;
+  z-index: 2;
+}
+.backgroundLineup::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5490196078);
+  z-index: 1;
+}
+.backgroundLineup .contentLineup {
+  position: relative;
+  z-index: 2;
+}
+
+.lineupRow {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 900px) {
+  .lineupRow {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  .lineupRow p {
+    flex: 1;
+  }
+  .lineupRow .imgLineupFest {
+    width: 35%;
+    height: auto;
+  }
+}
+
+.imgLineupFest {
+  border-radius: 7px;
+}
+
+.tablaArtistas {
+  overflow-x: auto;
+}
+.tablaArtistas table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  background-color: #fff;
+  table-layout: fixed;
+}
+.tablaArtistas th {
+  font-size: 15px;
+  font-weight: 800;
+  background-color: #5fc4fb;
+  border: 2px solid #5fc4fb;
+}
+@media (min-width: 900px) {
+  .tablaArtistas th {
+    font-size: 19px;
+  }
+}
+.tablaArtistas td {
+  font-size: 14px;
+  padding: 0.5rem;
+  border: 2px solid #5fc4fb;
+}
+@media (min-width: 900px) {
+  .tablaArtistas td {
+    font-size: 17px;
+  }
+}
+
+.carouselLolla {
   margin: 0 auto;
-  padding-bottom: 1rem;
+}
+@media (min-width: 500px) {
+  .carouselLolla {
+    max-width: 800px;
+  }
+}
+@media (min-width: 900px) {
+  .carouselLolla img {
+    object-position: top;
+    padding: 1rem 2rem;
+  }
 }
 
 .botonContenido {
@@ -303,7 +446,6 @@ body {
   text-decoration: none;
   color: #fff;
   background: #5fc4fb;
-  background-size: 200% 200%;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }

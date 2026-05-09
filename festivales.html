@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="bodyFestivales">
     <!-- H E A D E R -->
     <header class="indexHeader">
         <nav class="navbar navbar-expand-lg bg-success-subtle fixed-top text-center">
@@ -53,7 +53,9 @@
         <h1>Festivales 2026</h1>
         <section class="listadoFest">
             <article class="contentLollapalooza">
-                <h2>Lollapalooza CL</h2>
+                <header class="mainTitulo">
+                    <h2>Lollapalooza CL</h2>
+                </header>
                 <section class="cardLineupFest">
                     <h3>¡De vuelta en Parque O'higgins!</h3>
                     <p> Esta nueva edición del festival marcó su esperado regreso al Parque O'Higgins tras varios años
@@ -61,50 +63,66 @@
                         Cerrillos, reuniendo cerca de 80 mil personas por jornada y más de 240 mil asistentes durante
                         todo el fin de semana. El retorno al recinto histórico fue ampliamente comentado por el público,
                         destacando la mejor conectividad, las áreas verdes y el ambiente más “clásico” del festival.</p>
-                    <h3>Lineup</h3>
-                    <img src="./img/lineupLollaCL.png" alt="Lineup festival Lollapalooza 2026">
-                    <p>Lollapalooza Chile 2026 llegó con una fusión de estéticas que mezclan lo nostálgico con lo
-                        actual. Esto se ve reflejado con artistas que van desde el pop contemporáneo al indie
-                        alternativo, electrónica y sonidos urbanos, entre otros.</p>
-
+                    <section class="backgroundLineup">
+                        <div class="contentLineup">
+                            <h3>Lineup</h3>
+                            <div class="lineupRow">
+                                <img class="imgLineupFest" src="./img/lineupLollaCL.png"
+                                    alt="Lineup festival Lollapalooza 2026">
+                                <p>Lollapalooza Chile 2026 llegó con una fusión de estéticas que mezclan lo nostálgico
+                                    con
+                                    lo
+                                    actual. Esto se ve reflejado con artistas que van desde el pop contemporáneo al
+                                    indie
+                                    alternativo, electrónica y sonidos urbanos, entre otros.</p>
+                            </div>
+                        </div>
+                    </section>
                     <h3>Mi planificación por día</h3>
-                    <section>
-                        <h4 class="categoriaHorarios">Horarios</h4>
+                    <div class="planificacionFest">
+                        <h4>Horarios</h4>
                         <p>A continuación verán un registro de mi planificación para Lollapalooza 2026</p>
-                        <div class="imagenes">
+                        <div class="planImgFest">
                             <img src="./img/viernesHorario.jpg" alt="Horario Viernes">
                             <img src="./img/sabadoHorario.jpg" alt="Horario Sábado">
                             <img src="./img/domingoHorario.jpg" alt="Horario Domingo">
                         </div>
 
-                        <h4 class="categoriaArtistas">Artistas que vi por día</h4>
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Viernes</th>
-                                    <th>Sábado</th>
-                                    <th>Domingo</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Men I Trust</td>
-                                    <td>Royel Otis</td>
-                                    <td>TV Girl</td>
-                                </tr>
-                                <tr>
-                                    <td>Sabrina Carpenter</td>
-                                    <td>Lorde</td>
-                                    <td>Addison Rae</td>
-                                </tr>
-                            </tbody>
-                        </table>
 
-                    </section>
+                        <h4>Artistas que vi por día</h4>
+                        <div class="table-responsive tablaArtistas">
+                            <table class="tablaLolla">
+                                <thead>
+                                    <tr>
+                                        <th>Viernes</th>
+                                        <th>Sábado</th>
+                                        <th>Domingo</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Men I Trust</td>
+                                        <td>Royel Otis</td>
+                                        <td>Addison Rae</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sabrina Carpenter</td>
+                                        <td>Lorde</td>
+                                        <td>TV Girl</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Chapell Roan</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </section>
                 <section class="recuerdosLolla">
                     <h3>Experiencias que tuve durante el festival</h3>
-                    <div id="carouselExample" class="carousel slide">
+                    <div id="carouselExample" class="carousel slide carouselLolla">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img src="./img/carLolla1.JPG" class="d-block w-100" alt="Collage de mi cumpleaños">
@@ -132,11 +150,12 @@
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </button>
-                        <div class="botonContenido">
-                        <a href="https://www.instagram.com/smithrrns" target="_blank" class="btn-instagram">
-                            Ver más contenido en Instagram
+                    </div>
+                    <div class="botonContenido">
+                        <a href="https://www.icloud.com/sharedalbum/es-es/#B1fG4TcsmPcmjsG" target="_blank"
+                            class="btn-instagram">
+                            Revive Lollapalooza conmigo
                         </a>
-                        </div>
                     </div>
                 </section>
             </article>
