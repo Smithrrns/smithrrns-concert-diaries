@@ -1,4 +1,4 @@
-.reviewBdBunny, .backgroundLineup .contentLineup, .heroContent {
+.reviewConcert, .backgroundLineup .contentLineup, .heroContent {
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.5215686275);
@@ -462,7 +462,7 @@ main {
   margin: 1rem;
 }
 
-.bdBunnyHero {
+.concertHero {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -476,20 +476,17 @@ main {
   height: 50vh;
 }
 
-.reviewBdBunny {
+.reviewConcert {
   z-index: 1;
 }
 
-.heroContentBdBunny {
+.heroContentConcert {
   position: relative;
   z-index: 2;
   color: #fff;
   padding: 2rem;
 }
 
-.bdBunnyContent {
-  padding: 1rem;
-}
 .bdBunnyContent h3 {
   padding-top: 1rem;
 }
@@ -497,10 +494,16 @@ main {
   padding-top: 0.5rem;
 }
 
+.setlistConcierto {
+  padding: 1rem;
+}
+
 .galeriaBdBunny {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  background-color: #d0f4fc;
+  padding: 1rem;
 }
 .galeriaBdBunny video,
 .galeriaBdBunny img {
@@ -516,6 +519,19 @@ main {
   .galeriaBdBunny {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.galeria__item {
+  padding: 0rem 1rem;
+}
+
+.mejoresMoment {
+  background-color: #d0f4fc;
+}
+.mejoresMoment h3 {
+  margin: auto;
+  padding-top: 1rem;
+  padding-left: 1rem;
 }
 
 * {

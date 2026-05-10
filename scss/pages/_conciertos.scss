@@ -10,13 +10,13 @@
 .main-concert {
     margin-top: 6rem;
 
-    h1{
+    h1 {
         margin: variables.$espaciado-base;
     }
 }
 
 //Hero
-.bdBunnyHero {
+.concertHero {
     @include mixins.centrar-contenido;
     flex-direction: column;
     gap: variables.$espaciado-base;
@@ -29,12 +29,13 @@
     position: relative;
     height: 50vh;
 }
-.reviewBdBunny {
+
+.reviewConcert {
     @extend %oscurecerFondo;
     z-index: 1;
 }
 
-.heroContentBdBunny{
+.heroContentConcert {
     position: relative;
     z-index: 2;
     color: variables.$colorBlanco;
@@ -42,22 +43,27 @@
 }
 
 //ContentbadBunny
-.bdBunnyContent{
-    padding: variables.$espaciado-base;
+.bdBunnyContent {
 
-    h3{
+    h3 {
         padding-top: variables.$espaciado-base;
     }
-    h4{
+
+    h4 {
         padding-top: 0.5rem;
     }
+}
+
+.setlistConcierto {
+    padding: variables.$espaciado-base;
 }
 
 .galeriaBdBunny {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
-    background-color: violet;
+    gap: variables.$espaciado-base;
+    background-color: variables.$colorCelesteFondo;
+    padding: 1rem;
 
     video,
     img {
@@ -72,5 +78,20 @@
 
     @media (min-width: variables.$bp-desktop) {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.galeria__item{
+    padding: 0rem variables.$espaciado-base;
+    
+}
+
+.mejoresMoment {
+    background-color: variables.$colorCelesteFondo;
+
+    h3{
+        margin: auto;
+        padding-top: 1rem;
+        padding-left: 1rem;
     }
 }
