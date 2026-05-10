@@ -468,12 +468,23 @@ main {
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  background-image: url("../img/backgrnBadBunny.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   position: relative;
   height: 50vh;
+}
+
+.hero--badbunny {
+  background-image: url("../img/backgrnBadBunny.png");
+}
+
+.hero--djo {
+  background-image: url("../img/backgrnDjo.jpg");
+}
+
+.hero--thelumineers {
+  background-image: url("../img/backgrnThelumineers.jpg");
 }
 
 .reviewConcert {
@@ -487,26 +498,26 @@ main {
   padding: 2rem;
 }
 
-.bdBunnyContent h3 {
+.mainContent h3 {
   padding-top: 1rem;
 }
-.bdBunnyContent h4 {
+.mainContent h4 {
   padding-top: 0.5rem;
 }
 
-.setlistConcierto {
+.setlistConciert {
   padding: 1rem;
 }
 
-.galeriaBdBunny {
+.galeriaConcert {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
   background-color: #d0f4fc;
   padding: 1rem;
 }
-.galeriaBdBunny video,
-.galeriaBdBunny img {
+.galeriaConcert video,
+.galeriaConcert img {
   width: 100%;
   height: auto;
   min-height: 200px;
@@ -516,7 +527,7 @@ main {
   object-fit: cover;
 }
 @media (min-width: 900px) {
-  .galeriaBdBunny {
+  .galeriaConcert {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -532,6 +543,16 @@ main {
   margin: auto;
   padding-top: 1rem;
   padding-left: 1rem;
+}
+
+.comingSoon {
+  background-color: #000000;
+}
+.comingSoon h2 {
+  color: #00eaff;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 0.5rem;
 }
 
 * {
