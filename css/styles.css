@@ -623,6 +623,66 @@ main {
   padding-bottom: 1rem;
 }
 
+hr {
+  border: none;
+  height: 1px;
+  background: #000;
+  opacity: 0.2;
+  margin: 3rem 0;
+}
+
+.heroBarricade {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  overflow: hidden;
+  gap: 1px;
+}
+.heroBarricade img {
+  width: 20%;
+  height: 30vh;
+  object-fit: cover;
+  display: block;
+}
+
+.textoHeroBarricade p {
+  font-size: 8px;
+}
+
+.disclaimerBarricade p {
+  padding: 0rem 2rem;
+  font-size: 18px;
+  font-weight: 100;
+  width: 80%;
+}
+.disclaimerBarricade .textoDestacado {
+  font-style: italic;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1.5px;
+}
+
+.previaBarricade {
+  padding: 2rem;
+}
+
+.textoPunteo {
+  font-size: 14px;
+}
+
+.imagenDefault {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imagenDefault img {
+  width: 80%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
 * {
   font-family: "Google Sans", sans-serif;
   margin: 0;
